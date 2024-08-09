@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: 'app'
+#    command: ./.docker/start.sh
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/app
+      - '/etc/timezone:/etc/timezone:ro'
+      - '/etc/localtime:/etc/localtime:ro'
+    labels:
+      filebeat_collector: true
