@@ -4,7 +4,7 @@ import { MaxLength } from 'class-validator';
 import { Product } from '@core/product/domain/entity/product.aggregate';
 
 export class ProductRules {
-  @MaxLength(255, { groups: ['name'] }) // Add a comma here
+  @MaxLength(255, { groups: ['name'] })
   name: string;
 
   constructor(entity: Product) {

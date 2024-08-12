@@ -75,4 +75,8 @@ export abstract class InMemoryRepository<
   }
 
   abstract getEntity(): new (...args: any[]) => E;
+
+  findByIds(ids: EntityId[]): Promise<E[]> {
+    return Promise.resolve([]);
+  }
 }
